@@ -54,3 +54,4 @@ The goal is to track the stock price of **Apple Inc. (AAPL)** and send email ale
 2. Run the script:  
 
 python script.py
+ADD YOUR SENDER'S AND RECEIVER'S EMAIL ADDRESSES and APP PASSWORD  
