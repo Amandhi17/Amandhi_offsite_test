@@ -53,8 +53,8 @@ print(f"Percentage change:{percentage_change:.2f}%")
 def send_alert(current_price,diff,pct_change):
     msg =EmailMessage()
     msg['Subject']="Apple Stock Price Alert"
-    msg['From']="amandhisiriwardena66@gmail.com"
-    msg['To']="siriwardenaamandhi31@gmail.com"
+    msg['From']="SENDERS'S EMAIL"
+    msg['To']="RECEIVER'S EMAIL"
     msg.set_content(f"""
                     Apple stock price :{current_price}
                     change: {diff:.2f}
@@ -62,7 +62,7 @@ def send_alert(current_price,diff,pct_change):
    """ )
     
     with smtplib.SMTP_SSL('smtp.gmail.com',465) as server:
-        server.login("amandhisiriwardena66@gmail.com","gcwa uwmj yhsj jgqf")
+        server.login("SENDERS'S EMAIL","APP_PASSWORD")
         server.send_message(msg)
         print("Email sent successfully.")   
 #threshold for alert
@@ -71,6 +71,7 @@ if abs(percentage_change) > threshold:
     send_alert(stock_price,price_difference,percentage_change)
 else:
     print("No significant change in stock price.")
+
 
 
 
